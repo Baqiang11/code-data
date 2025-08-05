@@ -23,6 +23,7 @@ jobs:
       - name: Run SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
         with:
-          projectBaseDir: .
+          args: >
+            -Dsonar.branch.name=main
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
